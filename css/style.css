@@ -1,10 +1,13 @@
 /* reset.css */
-html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,font,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, dl,dt,dd,ol,ul,li, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
-body{background:white;color:#333;font-family:helvetica,arial,sans-serif;line-height:1;}
+/*html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,font,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, dl,dt,dd,ol,ul,li, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}*/
+
+/* http://bettermotherfuckingwebsite.com/ */
+body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}
+h1,h2,h3{line-height:1.2}
 
 /* style.css */
-body{text-align:center;}
 h1 {font-size: 25px}
+.chker{text-align: center;}
 .chker > p{border-radius:3px;font-family:"Courier New";padding:5px 0;width:80%;margin:20px auto;text-align:center;}
 /*@link https://dribbble.com/shots/1012575--Freebie-Timer*/
 /*light*/
