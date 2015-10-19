@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chker : ianchanning</title>
+		<link href="/images/favicon.ico" type="image/x-icon" rel="icon" />
+		<link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+		<link type="text/css" href="css/style.css?ver=0.3" rel="stylesheet" />
+	</head>
+	<body class="light">
+		<div id="chker" class="chker">
+			<p>
+				<span class="day">00</span> <!-- <span class="hr">00</span>: --><span class="min">25</span>:<span class="sec">00</span><!-- .<span class="hsec">00</span> -->
+			</p>
+			<div>
+				<a href="#" class="start button gray">Start</a>
+				<a href="#" class="stop button gray">Stop</a>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.chk.js"></script>
+		<script type="text/javascript" src="js/jquery.chker.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				$('#chker').chker();
+
+				var checkToggle = function(stopButton, startButton) {
+					return $('#chker').hasClass('ticking') ? stopButton : startButton;
+				};
+
+				var myToggle = function(myButton) {
+					myButton.click().focus().toggleClass('button-activated');
+				};
+
+				var myActive = function(myButton) {
+					myButton.toggleClass('button-activated');
+				};
+
+				$(document).keydown(function(event) {
+					if (event.keyCode == '32') { // space bar
+						event.preventDefault(); // the default being scroll the page down
+						myActive(checkToggle($('#chker .stop'), $('#chker .start')));
+					}
+				});
+
+				$(document).keyup(function(event) {
+					if (event.keyCode == '32') { // space bar
+						event.preventDefault();
+						myToggle(checkToggle($('#chker .stop'), $('#chker .start')));
+					}
+
+				});
+
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+/* reset.css */
+html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,font,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, dl,dt,dd,ol,ul,li, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body{background:white;color:#333;font-family:helvetica,arial,sans-serif;line-height:1;}
+
+/* style.css */
+body{text-align:center;}
+h1 {font-size: 25px}
+.chker > p{border-radius:3px;font-family:"Courier New";padding:5px 0;width:80%;margin:20px auto;text-align:center;}
+/*@link https://dribbble.com/shots/1012575--Freebie-Timer*/
+/*light*/
+body{background-color:#ebebeb;}
+.chker > p{background-color:#ddd;box-shadow:0 1px 1px rgba(0, 0, 0, 0.1) inset;color:#333;}
+
+.chker > p{font-size:500%;}
+.chker > p > .chk{font-size:250%;}
+/* neon */
+/*.chker > p.neon{text-shadow:0 0 10px #3694bb, 0 0 20px #3694bb, 0 0 30px #3694bb, 0 0 40px #28345d, 0 0 70px #28345d, 0 0 80px #28345d, 0 0 100px #28345d, 0 0 150px #28345d;}*/
+.chker > p.neon{text-shadow:0 0 5px #3694bb, 0 0 10px #3694bb, 0 0 15px #3694bb, 0 0 20px #28345d, 0 0 35px #28345d, 0 0 40px #28345d, 0 0 50px #28345d, 0 0 75px #28345d;}
+/* vintage */
+.chker > p.vintage{text-shadow:5px 5px 0 #1592ae, 7px 7px 0 #fff;}
+/**
+ * @link http://webdesign.tutsplus.com/tutorials/orman-clarks-chunky-3d-web-buttons-the-css3-version--webdesign-5731
+ */
+a.button {
+  display: inline-block;
+  position: relative;
+  height: 32px;
+  width: 80px;
+  margin: 0 12px 24px 0;
+
+  text-decoration: none;
+  line-height: 32px;
+  text-align: center;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+a.button:before,
+a.button:after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  height: 32px;
+  width: 80px;
+  bottom: -1px;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+a.button:before {
+  height: 30px;
+  bottom: -4px;
+  border-top: 0;
+
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+
+  -webkit-box-shadow: 0 1px 1px 0px #bfbfbf;
+  -moz-box-shadow: 0 1px 1px 0px #bfbfbf;
+  box-shadow: 0 1px 1px 0px #bfbfbf;
+}
+
+/* GRAY */
+a.gray,
+a.gray:hover,
+a.gray:visited {
+  color: #555;
+  border-bottom: 4px solid #b2b1b1;
+  text-shadow: 0px 1px 0px #fafafa;
+
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+  background: -moz-linear-gradient(top,  #eee,  #e2e2e2);
+
+  box-shadow: inset 1px 1px 0 #f5f5f5;
+}
+
+.gray:before,
+.gray:after {
+  border: 1px solid #cbcbcb;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+a.gray:hover {
+  background: #e2e2e2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#eee));
+  background: -moz-linear-gradient(top,  #e2e2e2,  #eee);
+}
+/* ACTIVE STATE */
+a.button:active, a.button-activated {
+  border: none;
+  bottom: -4px;
+  margin-bottom: 29px;
+
+  -webkit-box-shadow: 0 1px 1px #fff;
+  -moz-box-shadow:  0 1px 1px #fff;
+  box-shadow:  1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+a.button:active:before,
+a.button:active:after,
+a.button-activated:before,
+a.button-activated:after {
+  border: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
