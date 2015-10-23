@@ -9,6 +9,7 @@
 		var mm 		= timer.find('.min');
 		var ss 		= timer.find('.sec');
 		var hs 		= timer.find('.hsec');
+		var pp 		= timer.find('.pomo');
 		var start 	= timer.find('.start');
 		var stop 	= timer.find('.stop');
 
@@ -29,18 +30,18 @@
 		Notification.requestPermission();
 
 		var randomNotification = function() {
-		  var randomQuote = quoteChooser();
-		  var options = {
-		  	body: randomQuote
-		  } ;
+			var randomQuote = quoteChooser();
+			var options = {
+				body: randomQuote
+			};
 
 			var n = new Notification('Bill says',options);
-		  setTimeout(n.close.bind(n), 4000);
+			setTimeout(n.close.bind(n), 4000);
 		};
 
 		var quoteChooser = function() {
-		    var randomNumber = Math.floor(Math.random() * 11);
-		    quote = quotes[randomNumber];
+			var randomNumber = Math.floor(Math.random() * 11);
+			quote = quotes[randomNumber];
 			return quote;
 		};
 
@@ -68,7 +69,7 @@
 			// t-minus 10, 9, 8, ...
 			// $(this).chk().down(ss, 10).down(mm, 0);
 			// pomodoro timer
-			$(this).chk().down(ss, 60).down(mm, 25).up(dd, 100, randomNotification);
+			$(this).chk().down(ss, 60).down(mm, 25).up(pp, 100, randomNotification);
 			document.title = timer.find('p').text() + ' - Chker : ianchanning';
 		};
 
