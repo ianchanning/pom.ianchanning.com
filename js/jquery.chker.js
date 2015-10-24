@@ -28,8 +28,13 @@
 		];
 
 		Notification.requestPermission();
+		var alarm = new Howl({
+		  urls: ['../audio/alarm-clock-01.ogg']
+		});
 
 		var randomNotification = function() {
+			alarm.play();
+
 			var randomQuote = quoteChooser();
 			var options = {
 				body: randomQuote
