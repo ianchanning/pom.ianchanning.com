@@ -29,7 +29,7 @@
 
 		Notification.requestPermission();
 		var alarm = new Howl({
-		  urls: ['../audio/alarm-clock-01.ogg']
+		  urls: ['audio/alarm-clock-01.ogg']
 		});
 
 		var randomNotification = function() {
