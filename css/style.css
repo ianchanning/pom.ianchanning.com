@@ -8,19 +8,19 @@ h1,h2,h3{line-height:1.2}
 /* style.css */
 h1 {font-size: 25px}
 .chker{text-align: center;}
-.chker > p{border-radius:3px;font-family:"Courier New";padding:5px 0;width:80%;margin:20px auto;text-align:center;}
+.chker > .clock{border-radius:3px;font-family:"Courier New";padding:5px 0;width:80%;margin:20px auto;text-align:center;}
 /*@link https://dribbble.com/shots/1012575--Freebie-Timer*/
 /*light*/
-body{background-color:#ebebeb;}
-.chker > p{background-color:#ddd;box-shadow:0 1px 1px rgba(0, 0, 0, 0.1) inset;color:#333;}
+body{background-color:#fff;}
+.chker > .clock{background-color:#ddd;box-shadow:0 1px 1px rgba(0, 0, 0, 0.1) inset;color:#333;}
 
-.chker > p{font-size:500%;}
-.chker > p > .chk{font-size:250%;}
+.chker > .clock{font-size:500%;}
+.chker > .clock > .chk{font-size:250%;}
 /* neon */
-/*.chker > p.neon{text-shadow:0 0 10px #3694bb, 0 0 20px #3694bb, 0 0 30px #3694bb, 0 0 40px #28345d, 0 0 70px #28345d, 0 0 80px #28345d, 0 0 100px #28345d, 0 0 150px #28345d;}*/
-.chker > p.neon{text-shadow:0 0 5px #3694bb, 0 0 10px #3694bb, 0 0 15px #3694bb, 0 0 20px #28345d, 0 0 35px #28345d, 0 0 40px #28345d, 0 0 50px #28345d, 0 0 75px #28345d;}
+/*.chker > .clock.neon{text-shadow:0 0 10px #3694bb, 0 0 20px #3694bb, 0 0 30px #3694bb, 0 0 40px #28345d, 0 0 70px #28345d, 0 0 80px #28345d, 0 0 100px #28345d, 0 0 150px #28345d;}*/
+.chker > .clock.neon{text-shadow:0 0 5px #3694bb, 0 0 10px #3694bb, 0 0 15px #3694bb, 0 0 20px #28345d, 0 0 35px #28345d, 0 0 40px #28345d, 0 0 50px #28345d, 0 0 75px #28345d;}
 /* vintage */
-.chker > p.vintage{text-shadow:5px 5px 0 #1592ae, 7px 7px 0 #fff;}
+.chker > .clock.vintage{text-shadow:5px 5px 0 #1592ae, 7px 7px 0 #fff;}
 /* bug fix to prevent below html moving up and down slightly when the buttons are pressed */
 .buttons {height: 70px;}
 /**
