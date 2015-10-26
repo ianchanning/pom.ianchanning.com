@@ -21,6 +21,8 @@ body{background-color:#ebebeb;}
 .chker > p.neon{text-shadow:0 0 5px #3694bb, 0 0 10px #3694bb, 0 0 15px #3694bb, 0 0 20px #28345d, 0 0 35px #28345d, 0 0 40px #28345d, 0 0 50px #28345d, 0 0 75px #28345d;}
 /* vintage */
 .chker > p.vintage{text-shadow:5px 5px 0 #1592ae, 7px 7px 0 #fff;}
+/* bug fix to prevent below html moving up and down slightly when the buttons are pressed */
+.buttons {height: 70px;}
 /**
  * @link http://webdesign.tutsplus.com/tutorials/orman-clarks-chunky-3d-web-buttons-the-css3-version--webdesign-5731
  */

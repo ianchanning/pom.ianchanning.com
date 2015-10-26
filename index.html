@@ -13,19 +13,20 @@
 			<p>
 				<span class="min">25</span>:<span class="sec">00</span> <span class="pomo">00</span>
 			</p>
-			<div>
+			<div class="buttons">
 				<a href="#" class="start button gray">Start</a>
 				<a href="#" class="stop button gray">Stop</a>
 			</div>
 		</div>
-		<p><a href="http://pomodorotechnique.com/get-started/">Reminder</a> to self:</p>
-		<h4>Choose a task you&rsquo;d like to get done</h4>
-		<p>Something big, something small, something you&rsquo;ve been putting off for a million years: it doesn&rsquo;t matter. What matters is that it&rsquo;s something that deserves your full, undivided attention.</p>
-		<h4>Set the pomodoro for 25 minutes</h4>
-		<p>Make a small oath to yourself: I will spend 25 minutes on this task and I will not interrupt myself. You can do it! After all, it&rsquo;s just 25 minutes.</p>
-		<h4>Work on the task until the pomodoro rings</h4>
-		<p>Immerse yourself in the task for the next 25 minutes. If you suddenly realize you have something else you need to do, write the task down on a sheet of paper.</p>
-
+		<div class="reminder">
+			<p><a href="http://pomodorotechnique.com/get-started/">Reminder</a> to self:</p>
+			<h4>Choose a task you&rsquo;d like to get done</h4>
+			<p>Something big, something small, something you&rsquo;ve been putting off for a million years: it doesn&rsquo;t matter. What matters is that it&rsquo;s something that deserves your full, undivided attention.</p>
+			<h4>Set the pomodoro for 25 minutes</h4>
+			<p>Make a small oath to yourself: I will spend 25 minutes on this task and I will not interrupt myself. You can do it! After all, it&rsquo;s just 25 minutes.</p>
+			<h4>Work on the task until the pomodoro rings</h4>
+			<p>Immerse yourself in the task for the next 25 minutes. If you suddenly realize you have something else you need to do, write the task down on a sheet of paper.</p>
+		</div>
 		<audio id="alarm">
 			<source src="audio/alarm-clock-01.mp3" type="audio/mpeg">
 			<source src="audio/alarm-clock-01.ogg" type="audio/ogg">
@@ -34,39 +35,6 @@
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/jquery.chk.js"></script>
 		<script type="text/javascript" src="js/jquery.chker.js"></script>
-		<script type="text/javascript">
-			$(function(){
-
-				$('#chker').chker();
-
-				var checkToggle = function(stopButton, startButton) {
-					return $('#chker').hasClass('ticking') ? stopButton : startButton;
-				};
-
-				var myToggle = function(myButton) {
-					myButton.click().focus().toggleClass('button-activated');
-				};
-
-				var myActive = function(myButton) {
-					myButton.toggleClass('button-activated');
-				};
-
-				$(document).keydown(function(event) {
-					if (event.keyCode == '32') { // space bar
-						event.preventDefault(); // the default being scroll the page down
-						myActive(checkToggle($('#chker .stop'), $('#chker .start')));
-					}
-				});
-
-				$(document).keyup(function(event) {
-					if (event.keyCode == '32') { // space bar
-						event.preventDefault();
-						myToggle(checkToggle($('#chker .stop'), $('#chker .start')));
-					}
-
-				});
-
-			});
-		</script>
+		<script type="text/javascript" src="js/jquery.main.js"></script>
 	</body>
 </html>
