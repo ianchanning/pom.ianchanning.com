@@ -4,14 +4,14 @@
 		var timerId = 0;
 		var tickInterval = 1000;
 
-		var dd 		= timer.find('.day');
-		var hh 		= timer.find('.hr');
-		var mm 		= timer.find('.min');
-		var ss 		= timer.find('.sec');
-		var hs 		= timer.find('.hsec');
-		var pp 		= timer.find('.pomo');
-		var start 	= timer.find('.start');
-		var stop 	= timer.find('.stop');
+		var dd      = timer.find('.day');
+		var hh      = timer.find('.hr');
+		var mm      = timer.find('.min');
+		var ss      = timer.find('.sec');
+		var hs      = timer.find('.hsec');
+		var pp      = timer.find('.pomo');
+		var start   = timer.find('.start');
+		var stop    = timer.find('.stop');
 
 		var quotes = [
 			'Split \'em open like a can of beans',
@@ -28,10 +28,12 @@
 		];
 
 		Notification.requestPermission();
-		var alarm = new Howl({
-		  urls: ['audio/alarm-clock-01.mp3', 'audio/alarm-clock-01.ogg']
-		});
-
+		/**
+		 * HTML5 audio element
+		 * @type element
+		 * @link https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Cross-browser_audio_basics#Creating_your_own_custom_audio_player
+		 */
+		var alarm = document.getElementById('alarm');
 		var randomNotification = function() {
 			alarm.play();
 
@@ -45,7 +47,7 @@
 		};
 
 		var quoteChooser = function() {
-			var randomNumber = Math.floor(Math.random() * 11);
+			var randomNumber = Math.floor(Math.random() * quotes.length);
 			quote = quotes[randomNumber];
 			return quote;
 		};
