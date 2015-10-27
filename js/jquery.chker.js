@@ -13,27 +13,32 @@
         var start   = timer.find('.start');
         var stop    = timer.find('.stop');
 
-        var quotes = [
-            'Split \'em open like a can of beans',
-            'Fulham lost...again ',
-            'This is rowing, not farming',
-            'Do some Damage!',
-            'Give it some beans!',
-            'Keep it ticking over',
-            'This is unreal!',
-            '1 hour ergos, its money in the bank!',
-            'I used to be a hard man!',
-            'No. No. No. Thats it! No. No. No.',
-            'Technique.'
-        ];
+        var quotes;
+        var alarm = document.getElementById('alarm');
+
+        var queryDict = {};
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(
+                function(item) {
+                    queryDict[item.split("=")[0]] = item.split("=")[1];
+            });
+        // console.log(queryDict);
+
+        if (!queryDict.q) {
+            queryDict.q = 'bacon.txt';
+        }
+        $(".clock a").removeClass('active');
+        $(".clock a[href='?q="+queryDict.q+"']").addClass('active');
+        console.log($(".clock a[href='?="+location.search+"']"));
+
+        $.get(queryDict.q, function(data) {
+           quotes = Hjson.parse('['+data+']');
+        });
 
         Notification.requestPermission();
-        /**
-         * HTML5 audio element
-         * @type element
-         * @link https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Cross-browser_audio_basics#Creating_your_own_custom_audio_player
-         */
-        var alarm = document.getElementById('alarm');
+
         var randomNotification = function() {
             alarm.play();
 
@@ -42,8 +47,8 @@
                 body: randomQuote
             };
 
-            var n = new Notification('Bill says',options);
-            setTimeout(n.close.bind(n), 4000);
+            var n = new Notification('Lock stock says',options);
+            setTimeout(n.close.bind(n), 10000);
         };
 
         var quoteChooser = function() {
