@@ -80,7 +80,7 @@
             // $(this).chk().down(ss, 10).down(mm, 0);
             // pomodoro timer
             $(this).chk().down(ss, 60).down(mm, 25).up(pp, 100, randomNotification);
-            document.title = timer.find('p').text() + ' - Chker : ianchanning';
+            document.title = timer.find('.time').text() + ' - Chker : ianchanning';
         };
 
     };

@@ -18,7 +18,7 @@ body{background-color:#fff;}
 .chker > .clock > .chk{font-size:250%;}
 .chker > .clock > ul {margin: 0 auto;}
 .chker > .clock > ul > li {float: left; font-size: 15%; text-shadow: none; list-style: none;}
-.chker > .clock > ul > li > a {text-decoration: none; padding: 0 13px;}
+.chker > .clock > ul > li > a {text-decoration: none; padding: 0 26px;}
 .chker > .clock > ul > li > a, .chker > .clock > ul > li > a:visited {color: #ccc;}
 .chker > .clock > ul > li > a.active, .chker > .clock > ul > li > a.active:visited {color: #333;}
 /* neon */
