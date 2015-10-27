@@ -27,4 +27,14 @@
         }
 
     });
+
+    $('#reminder').click(function(){
+        if ($(this).text() === '+') {
+            $('.reminder').fadeIn('slow');
+            $(this).html('&times;');
+        } else {
+            $('.reminder').fadeOut('slow');
+            $(this).html('+');
+        }
+    });
 })(jQuery);
