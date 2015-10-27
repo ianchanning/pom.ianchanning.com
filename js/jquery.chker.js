@@ -24,14 +24,12 @@
                 function(item) {
                     queryDict[item.split("=")[0]] = item.split("=")[1];
             });
-        // console.log(queryDict);
 
         if (!queryDict.q) {
             queryDict.q = 'bacon.txt';
         }
         $(".clock a").removeClass('active');
         $(".clock a[href='?q="+queryDict.q+"']").addClass('active');
-        console.log($(".clock a[href='?="+location.search+"']"));
 
         $.get(queryDict.q, function(data) {
            quotes = Hjson.parse('['+data+']');
