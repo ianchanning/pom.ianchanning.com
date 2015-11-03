@@ -16,24 +16,36 @@
         var quotes;
         var alarm = document.getElementById('alarm');
 
-        var queryDict = {};
-        location.search
-            .substr(1)
-            .split("&")
-            .forEach(
-                function(item) {
-                    queryDict[item.split("=")[0]] = item.split("=")[1];
-            });
+        var quotesFile = function() {
+            var queryDict = {};
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(
+                    function(item) {
+                        queryDict[item.split("=")[0]] = item.split("=")[1];
+                });
 
-        if (!queryDict.q) {
-            queryDict.q = 'bacon.txt';
-        }
-        $(".clock a").removeClass('active');
-        $(".clock a[href='?q="+queryDict.q+"']").addClass('active');
+            if (!queryDict.q) {
+                queryDict.q = 'bacon.txt';
+            }
 
-        $.get(queryDict.q, function(data) {
+            return queryDict.q;
+        };
+
+        var fileName = quotesFile();
+
+        var quoter = function(fileName) {
+            file = fileName.split('.');
+            return ucwords(file[0].replace(/_/g, ' '));
+        };
+
+        $.get(fileName, function(data) {
            quotes = Hjson.parse('['+data+']');
         });
+
+        $(".clock a").removeClass('active');
+        $(".clock a[href='?q="+fileName+"']").addClass('active');
 
         Notification.requestPermission();
 
@@ -45,7 +57,8 @@
                 body: randomQuote
             };
 
-            var n = new Notification('Lock stock says',options);
+
+            var n = new Notification(quoter(fileName)+' says',options);
             setTimeout(n.close.bind(n), 10000);
         };
 
@@ -83,6 +96,11 @@
             document.title = timer.find('.time').text() + ' - Chker : ianchanning';
         };
 
+        function ucwords(str) {
+            return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {
+                return $1.toUpperCase();
+            });
+        }
     };
 
 })(jQuery);
