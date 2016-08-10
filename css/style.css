@@ -125,4 +125,15 @@ a.button-activated:after {
   box-shadow: none;
 }
 
+.notifications p {
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  font-style: italic;
+  padding-left: 1.4em;
+}
 
+.notifications > p::before {
+  content: "“";
+  margin-left: -1.1em;
+  padding-right: 0.55em;
+}
