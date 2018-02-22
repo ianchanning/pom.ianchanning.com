@@ -29,7 +29,7 @@
         var fileName = quotesFile();
         var quotes;
 
-        $.get(fileName + '.txt', function(data) {
+        $.get('quotes/' + fileName + '.txt', function(data) {
             quotes = Hjson.parse('['+data+']');
         });
 
