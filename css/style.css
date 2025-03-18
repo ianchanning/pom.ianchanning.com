@@ -8,7 +8,7 @@ h1,h2,h3{line-height:1.2}
 
 /* style.css */
 h1 {font-size: 25px}
-.reminder{display: none;}
+.reminder{display: none; padding: 0 30px;}
 .chker{text-align: center; padding: 1px;}
 .chker > .clock{border-radius: 6px; font-family: sans-serif; padding: 0; width: 80%; margin: 70px auto; text-align: center; line-height: 1.0; font-weight: 100;}
 /*@link https://dribbble.com/shots/1012575--Freebie-Timer*/
