@@ -19,7 +19,7 @@ body{background-color:#f3f3f3;}
 .chker > .clock > .time {font-size:500%; letter-spacing: -8px;}
 .chker > .clock > .time > .pomo {font-size:50%; letter-spacing: -4px}
 .chker > .clock > .chk{font-size:250%;}
-.chker > .clock > ul {margin: 10px auto 10px; text-transform: uppercase; letter-spacing: -1px; padding: 0; display: inline-block; font-weight: 500; font-family: sans-serif;}
+.chker > .clock > ul {margin: 10px auto 0; text-transform: uppercase; letter-spacing: -1px; padding: 0; display: inline-block; font-weight: 500; font-family: sans-serif;}
 .chker > .clock > ul > li {font-size: 70%; float: left; list-style: none;}
 .chker > .clock > ul > li > a {padding: 0 22px;}
 .chker > .clock a {text-decoration: none; text-shadow: none;}
