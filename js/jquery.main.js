@@ -113,7 +113,7 @@ import { chuck } from "./chuck.js";
         };
 
         var quoter = function(fileName) {
-            file = fileName.split('.');
+            var file = fileName.split('.');
             return ucwords(file[0].replace(/_/g, ' '));
         };
 
@@ -147,12 +147,19 @@ import { chuck } from "./chuck.js";
         var formatQuote = function(quote, speaker) {
             // format single quotes nicely
             var prettyQuote = quote.replace(/'/g, '&rsquo;');
-            return '<p>'+prettyQuote+'<br>&mdash; '+speaker+'</p>';
+
+            var now = new Date();
+            // Options for a nicely formatted time: 12-hour format with hours, minutes
+            var timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+            var formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+            
+            // Append the time to the speaker name, wrapped in a span for easy styling
+            return '<p>' + prettyQuote + '<br>&mdash; ' + speaker + ' <span class="quote-time">@ ' + formattedTime + '</span></p>';
         };
 
         var quoteChooser = function() {
             var randomNumber = Math.floor(Math.random() * quotes.length);
-            quote = quotes[randomNumber];
+            var quote = quotes[randomNumber];
             return quote;
         };
 
