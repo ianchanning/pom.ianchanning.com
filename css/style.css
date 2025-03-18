@@ -2,27 +2,29 @@
 /*html,body,div,span,applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,font,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, dl,dt,dd,ol,ul,li, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}*/
 
 /* http://bettermotherfuckingwebsite.com/ */
-body{margin:40px auto;max-width:650px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}
+html{background-color: #c7d1dc;}
+body{margin:40px auto;max-width:680px;line-height:1.6;font-size:18px;color:#444;padding:0; border-radius: 2px;}
 h1,h2,h3{line-height:1.2}
 
 /* style.css */
 h1 {font-size: 25px}
 .reminder{display: none;}
-.chker{text-align: center;}
-.chker > .clock{border-radius:3px;font-family:"Courier New";padding:5px 0;width:80%;margin:20px auto;text-align:center;line-height: 1.1;}
+.chker{text-align: center; padding: 1px;}
+.chker > .clock{border-radius: 6px; font-family: sans-serif; padding: 0; width: 80%; margin: 70px auto; text-align: center; line-height: 1.0; font-weight: 100;}
 /*@link https://dribbble.com/shots/1012575--Freebie-Timer*/
 /*light*/
-body{background-color:#fff;}
-.chker > .clock{background-color:#f9f9f9;box-shadow:0 2px 1px rgba(0, 0, 0, 0.1) inset;color:#333;text-shadow:0px 2px 0 #aaa;}
+body{background-color:#f3f3f3;}
+.chker > .clock{background-color: #e5e5e5; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset, 0 3px 0 #ffffff; color: #343b45;/* text-shadow: 0px 0px 4px #fff; */}
 
-.chker > .clock > .time {font-size:500%;}
+.chker > .clock > .time {font-size:500%; letter-spacing: -8px;}
+.chker > .clock > .time > .pomo {font-size:50%; letter-spacing: -4px}
 .chker > .clock > .chk{font-size:250%;}
-.chker > .clock > ul {margin: 0 auto;}
-.chker > .clock > ul > li {font-size: 80%; float: left; list-style: none;}
-.chker > .clock > ul > li > a {padding: 0 26px;}
+.chker > .clock > ul {margin: 10px auto 10px; text-transform: uppercase; letter-spacing: -1px; padding: 0; display: inline-block; font-weight: 500; font-family: sans-serif;}
+.chker > .clock > ul > li {font-size: 70%; float: left; list-style: none;}
+.chker > .clock > ul > li > a {padding: 0 22px;}
 .chker > .clock a {text-decoration: none; text-shadow: none;}
 .chker > .clock a, .chker > .clock a:visited {color: #ccc;}
-.chker > .clock a.active, .chker > .clock a.active:visited {color: #333;}
+.chker > .clock a.active, .chker > .clock a.active:visited {color: #343b45; text-shadow: 0px 0px 4px #fff;}
 /* neon */
 /*.chker > .clock.neon{text-shadow:0 0 10px #3694bb, 0 0 20px #3694bb, 0 0 30px #3694bb, 0 0 40px #28345d, 0 0 70px #28345d, 0 0 80px #28345d, 0 0 100px #28345d, 0 0 150px #28345d;}*/
 .chker > .clock.neon{text-shadow:0 0 5px #3694bb, 0 0 10px #3694bb, 0 0 15px #3694bb, 0 0 20px #28345d, 0 0 35px #28345d, 0 0 40px #28345d, 0 0 50px #28345d, 0 0 75px #28345d;}
@@ -125,6 +127,7 @@ a.button-activated:after {
   box-shadow: none;
 }
 
+.notifications {background-color: #fff; padding: 30px;}
 .notifications p {
   border-left: 3px solid rgba(0, 0, 0, 0.1);
   font-size: 1.5em;
