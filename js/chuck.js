@@ -193,6 +193,7 @@ const chuck = () => {
         func();
       } catch (e) {
         // bury the chucker
+        console.log(e);
       }
     }
   };
